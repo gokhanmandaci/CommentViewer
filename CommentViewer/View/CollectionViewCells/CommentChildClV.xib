@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="commentChildReuseIdCV" id="2yI-2y-pk8" customClass="CommentChildClVC" customModule="CommentViewer" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="145"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
+                <rect key="frame" x="0.0" y="0.0" width="414" height="145"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8JH-0Q-5zX">
+                        <rect key="frame" x="344" y="0.0" width="70" height="145"/>
+                        <color key="backgroundColor" red="1" green="0.30449715090000001" blue="0.17290361630000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="70" id="E82-w9-TJP"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" weight="medium" pointSize="15"/>
+                        <state key="normal" title="Delete">
+                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </state>
+                    </button>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Dge-Tt-ILx">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="145"/>
+                        <subviews>
+                            <button opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Y8A-X5-aas" customClass="DownloaderButton" customModule="CommentViewer" customModuleProvider="target">
+                                <rect key="frame" x="40" y="15" width="30" height="30"/>
+                                <color key="backgroundColor" red="0.94509803920000002" green="0.69411764710000001" blue="0.058823529409999999" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="30" id="1tj-HV-ptF"/>
+                                    <constraint firstAttribute="height" constant="30" id="c4r-6S-309"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <integer key="value" value="15"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="btnUserAction:" destination="2yI-2y-pk8" eventType="touchUpInside" id="Gqh-f6-wCg"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="252" text="Bessie Pena" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XbK-B6-zeg">
+                                <rect key="frame" x="80" y="15" width="75" height="16"/>
+                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="13"/>
+                                <color key="textColor" red="0.1529411765" green="0.1529411765" blue="0.1529411765" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="252" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aK0-5r-9R4">
+                                <rect key="frame" x="80" y="38" width="298" height="67"/>
+                                <string key="text">Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum.</string>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <color key="textColor" red="0.4823529412" green="0.4823529412" blue="0.4823529412" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="top" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bAb-Iv-QNo" customClass="CButton" customModule="CommentViewer" customModuleProvider="target">
+                                <rect key="frame" x="378" y="38" width="36" height="36"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="36" id="C2L-my-mQ8"/>
+                                    <constraint firstAttribute="width" constant="36" id="RaU-fI-I4V"/>
+                                </constraints>
+                                <state key="normal" image="heartempty"/>
+                                <connections>
+                                    <action selector="btnLikesAction:" destination="2yI-2y-pk8" eventType="touchUpInside" id="dSW-pw-jwj"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="4h" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0kg-YU-WeT">
+                                <rect key="frame" x="80" y="123.5" width="15" height="14.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                <color key="textColor" red="0.4823529412" green="0.4823529412" blue="0.4823529412" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tZa-UM-lMe">
+                                <rect key="frame" x="110" y="116" width="53" height="29"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="13"/>
+                                <state key="normal" title="10 Likes">
+                                    <color key="titleColor" red="0.4823529412" green="0.4823529412" blue="0.4823529412" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="o4i-3Q-lAF">
+                                <rect key="frame" x="178" y="116.5" width="37" height="28"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="13"/>
+                                <state key="normal" title="Reply">
+                                    <color key="titleColor" red="0.4823529412" green="0.4823529412" blue="0.4823529412" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="btnReplyAction:" destination="2yI-2y-pk8" eventType="touchUpInside" id="ydO-uU-4lc"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="0kg-YU-WeT" firstAttribute="leading" secondItem="XbK-B6-zeg" secondAttribute="leading" id="1rH-px-Uff"/>
+                            <constraint firstItem="Y8A-X5-aas" firstAttribute="top" secondItem="Dge-Tt-ILx" secondAttribute="top" constant="15" id="8tQ-qf-5lD"/>
+                            <constraint firstItem="XbK-B6-zeg" firstAttribute="top" secondItem="Dge-Tt-ILx" secondAttribute="top" constant="15" id="D8E-gk-7kr"/>
+                            <constraint firstItem="XbK-B6-zeg" firstAttribute="leading" secondItem="Y8A-X5-aas" secondAttribute="trailing" constant="10" id="DFY-ok-FwK"/>
+                            <constraint firstItem="bAb-Iv-QNo" firstAttribute="top" secondItem="aK0-5r-9R4" secondAttribute="top" id="LsH-Gt-k1E"/>
+                            <constraint firstItem="bAb-Iv-QNo" firstAttribute="leading" secondItem="aK0-5r-9R4" secondAttribute="trailing" id="SzM-cE-aRy"/>
+                            <constraint firstAttribute="bottom" secondItem="tZa-UM-lMe" secondAttribute="bottom" id="cYm-3Q-Bub"/>
+                            <constraint firstAttribute="trailing" secondItem="bAb-Iv-QNo" secondAttribute="trailing" id="fcZ-YD-4AR"/>
+                            <constraint firstItem="aK0-5r-9R4" firstAttribute="leading" secondItem="Y8A-X5-aas" secondAttribute="trailing" constant="10" id="gGU-9p-CQa"/>
+                            <constraint firstItem="o4i-3Q-lAF" firstAttribute="centerY" secondItem="tZa-UM-lMe" secondAttribute="centerY" id="hLy-PJ-7e7"/>
+                            <constraint firstItem="0kg-YU-WeT" firstAttribute="centerY" secondItem="tZa-UM-lMe" secondAttribute="centerY" id="jWV-xQ-au1"/>
+                            <constraint firstItem="tZa-UM-lMe" firstAttribute="top" secondItem="aK0-5r-9R4" secondAttribute="bottom" constant="11" id="ph8-Lw-cXz"/>
+                            <constraint firstItem="o4i-3Q-lAF" firstAttribute="leading" secondItem="tZa-UM-lMe" secondAttribute="trailing" constant="15" id="qcs-Bz-V0X"/>
+                            <constraint firstItem="Y8A-X5-aas" firstAttribute="leading" secondItem="Dge-Tt-ILx" secondAttribute="leading" constant="40" id="vM3-0d-Dtc"/>
+                            <constraint firstItem="tZa-UM-lMe" firstAttribute="leading" secondItem="0kg-YU-WeT" secondAttribute="trailing" constant="15" id="yKk-Xj-7gg"/>
+                            <constraint firstItem="aK0-5r-9R4" firstAttribute="top" secondItem="XbK-B6-zeg" secondAttribute="bottom" constant="7" id="zz7-J7-Nyu"/>
+                        </constraints>
+                    </view>
+                </subviews>
+            </view>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <constraints>
+                <constraint firstAttribute="bottom" secondItem="8JH-0Q-5zX" secondAttribute="bottom" id="4Yw-r6-e6P"/>
+                <constraint firstItem="8JH-0Q-5zX" firstAttribute="top" secondItem="2yI-2y-pk8" secondAttribute="top" id="B7q-WQ-kqA"/>
+                <constraint firstItem="Dge-Tt-ILx" firstAttribute="leading" secondItem="2yI-2y-pk8" secondAttribute="leading" id="WTf-Kz-FLs"/>
+                <constraint firstAttribute="bottom" secondItem="Dge-Tt-ILx" secondAttribute="bottom" id="ah2-sZ-4et"/>
+                <constraint firstItem="Dge-Tt-ILx" firstAttribute="top" secondItem="2yI-2y-pk8" secondAttribute="top" id="i3F-rD-BHz"/>
+                <constraint firstAttribute="trailing" secondItem="8JH-0Q-5zX" secondAttribute="trailing" id="w4m-OX-Ywh"/>
+                <constraint firstAttribute="trailing" secondItem="Dge-Tt-ILx" secondAttribute="trailing" id="yYq-zf-DNw"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="qj4-sx-CWM"/>
+            <connections>
+                <outlet property="btnDelete" destination="8JH-0Q-5zX" id="po0-Wq-zGy"/>
+                <outlet property="btnLike" destination="bAb-Iv-QNo" id="IRt-fN-1jj"/>
+                <outlet property="btnLikeCount" destination="tZa-UM-lMe" id="dfj-vf-fOx"/>
+                <outlet property="btnReply" destination="o4i-3Q-lAF" id="9AV-SE-7Oh"/>
+                <outlet property="btnUser" destination="Y8A-X5-aas" id="bVy-f2-JlE"/>
+                <outlet property="lblComment" destination="aK0-5r-9R4" id="gpE-hr-vAo"/>
+                <outlet property="lblTime" destination="0kg-YU-WeT" id="lfK-AJ-Gmj"/>
+                <outlet property="lblUsername" destination="XbK-B6-zeg" id="5OQ-t3-QBf"/>
+                <outlet property="vwContainer" destination="Dge-Tt-ILx" id="26z-2l-SFI"/>
+            </connections>
+            <point key="canvasLocation" x="115.94202898550725" y="88.058035714285708"/>
+        </collectionViewCell>
+    </objects>
+    <resources>
+        <image name="heartempty" width="16" height="14"/>
+    </resources>
+</document>
